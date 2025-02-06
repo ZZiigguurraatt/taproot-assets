@@ -769,6 +769,17 @@ func (n *Negotiator) HandleIncomingSellAccept(msg rfqmsg.SellAccept,
 		tolerance := rfqmath.NewBigIntFromUint64(
 			n.cfg.AcceptPriceDeviationPpm,
 		)
+
+
+
+
+		log.Debugf("msg.AssetRate=%v, assetRate=%v, assetRate.Rate=%v, tolerance=%v, msg.Request.AssetRateHint=%v", msg.AssetRate, assetRate,assetRate.Rate,tolerance,msg.Request.AssetRateHint)
+
+
+
+
+
+
 		acceptablePrice := msg.AssetRate.Rate.WithinTolerance(
 			assetRate.Rate, tolerance,
 		)
