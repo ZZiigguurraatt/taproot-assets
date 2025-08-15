@@ -375,6 +375,14 @@ var allTestCases = []*testCase{
 		name: "address v2 with group key",
 		test: testAddressV2WithGroupKey,
 	},
+
+
+	{
+		name: "problem address v2 with group key",
+		test: problemtestAddressV2WithGroupKey,
+	},
+
+
 	{
 		name: "address v2 with group key restart",
 		test: testAddressV2WithGroupKeyRestart,
